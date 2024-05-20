@@ -1,0 +1,22 @@
+.footer {
+  padding: 20px 0;
+}
+
+.cont-list {
+  margin-top: 10px;
+}
+
+.cont-list .list01 {
+  display: block;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cont-list .list01:hover {
+  text-decoration: underline;
+}
+
+.cont-list ion-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}

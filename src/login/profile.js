@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Figure from 'react-bootstrap/Figure';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Login() {
+function Profile() {
   const [caption, setCaption] = useState('bio goes here');
   const [newCaption, setNewCaption] = useState('');
 
@@ -14,21 +15,21 @@ function Login() {
   };
 
   return (
-    <div style={{ color: 'white' }}>
+    <div style={{ color: 'white', padding: '20px' }}>
       <Figure>
         <Figure.Image
           width={171}
           height={180}
           alt="Login Image"
-          src="/img/login.jpg"
+          src={require('../img/login.jpg')}
         />
-        <Figure.Caption style={{color:'white'}}>
+        <Figure.Caption style={{ color: 'white' }}>
           {caption}
         </Figure.Caption>
       </Figure>
       <Form onSubmit={handleUpdateBio}>
         <Form.Group controlId="formBio" className='mb-3'>
-          <Form.Label style={{color:'grey'}}>Update Bio</Form.Label>
+          <Form.Label style={{ color: 'grey' }}>Update Bio</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="Enter new bio" 
@@ -45,4 +46,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Profile;
